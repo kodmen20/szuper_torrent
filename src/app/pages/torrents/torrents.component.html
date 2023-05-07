@@ -1,0 +1,54 @@
+<br>
+
+<div class="big-div">
+    
+
+<mat-card class="torrent-card">
+    <mat-card-header class="card-title">
+        <mat-card-title><span>{{ torrentTitle }}</span></mat-card-title>
+    </mat-card-header>
+    
+    <mat-card-subtitle><span>Uploaded by:  {{ torrentUploader }}</span><span class="date-span">{{ torrentDate }}</span></mat-card-subtitle>
+    <mat-card-subtitle>Category: {{ torrentCategory }}</mat-card-subtitle>
+    <mat-divider class="smol-divider"></mat-divider>
+    <mat-card-content>
+        <p class="torrent-description"> {{ torrentDescription }} </p>
+      </mat-card-content>
+      <mat-divider class="smol-divider"></mat-divider>
+      <input type="button" submit class="download-button" value="Download" (click)="torrentDownload()">
+</mat-card>
+
+<br>
+
+<div class="comment-div">
+    <ul>
+        <li *ngFor="let comment of commentList">
+            <span>{{ comment.username }} wrote:</span>
+            <span class="date-span">{{ comment.date }}</span>
+            <br>
+                <p class="comment-text">{{ comment.text }}</p>
+            <br>
+            <mat-divider></mat-divider>
+        </li>
+    </ul>
+</div>
+
+
+<br>
+
+<form [formGroup]="newCommentForm" (ngSubmit)="addNewComment()">
+    <div>
+        <div class="new-comment-container">
+            <mat-form-field appearance="fill" floatLabel=always>
+                <mat-label>Add a new comment:</mat-label>
+                <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" formControlName="commentText" #message maxlength="256" cdkAutosizeMinRows="5" cdkAutosizeMaxRows="10"></textarea>
+                <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+            </mat-form-field>
+        </div>
+        <div>
+            <input type="submit" submit class="comment-submit">
+        </div>
+    </div>
+</form>
+
+</div>

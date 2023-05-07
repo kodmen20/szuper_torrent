@@ -1,0 +1,49 @@
+
+<div class="big-div">
+<mat-accordion>
+<div *ngFor="let torrent of torrentList">
+    <mat-expansion-panel (click)="rowClick(torrent)">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+            Title: {{torrent.title}}  
+        </mat-panel-title>
+      <mat-panel-description>
+        Date: {{torrent.date}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+      <form [formGroup]="myTorrentForm">
+
+        <mat-form-field appearance="outline" floatLabel=always>
+            <mat-label>Edit title:</mat-label>
+            <input matInput formControlName="title" placeholder={{torrent.title}}>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" floatLabel=always>
+          <mat-label>Edit description:</mat-label>
+          <input matInput formControlName="description" placeholder={{torrent.description}}>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" floatLabel=always>
+          <mat-select [(value)]="defaultTorrentCategory" formControlName="category" appearance="fill">
+            <mat-option value="movies">Movies<mat-icon>movie</mat-icon></mat-option>
+            <mat-option value="shows">Shows<mat-icon>slideshow</mat-icon></mat-option>
+            <mat-option value="games">Games<mat-icon>games</mat-icon></mat-option>
+            <mat-option value="programs">Programs<mat-icon>mouse</mat-icon></mat-option>
+            <mat-option value="other">Other<mat-icon>filter_vintage</mat-icon></mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br>
+        old file: {{fileName}}<br>
+        <input type="file" (change)="fileUploaded($event)" formControlName="torrent_url" accept=".torrent">
+        <br><br>
+        <input type="button" (click)="updateTorrent(torrent)" value="Update" class="update-button">
+        <input type="button" (click)="deleteTorrent(torrent)" value="Delete" class="delete-button">
+        
+      </form>
+      <input type="button" (click)="navigateToMyTorrent(torrent)" value="To torrent >>" class="navigate-button">
+    </mat-expansion-panel>
+</div>
+</mat-accordion>
+
+</div>
+

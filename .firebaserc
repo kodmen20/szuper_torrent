@@ -1,0 +1,19 @@
+{
+  "projects": {
+    "default": "szupertorrent",
+    "szuper_torrent": "szupertorrent"
+  },
+  "targets": {
+    "szupertorrent": {
+      "hosting": {
+        "szuper_torrent": [
+          "szupertorrent"
+        ]
+      }
+    },
+    "projects": {
+      "default": "szupertorrent"
+    }
+  },
+  "etags": {}
+}

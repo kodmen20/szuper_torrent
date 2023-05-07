@@ -1,0 +1,71 @@
+#frendz{
+    font-size: 30px;
+    text-align: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+    padding-top: 5px;
+}
+
+.filter-icons{
+    position: relative;
+    top: 7px;
+    margin-left: 5px; /* optional */
+    padding-right: 20px;
+}
+
+.category-icons{
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+
+.all-label{
+    padding-right: 25px;
+}
+
+.checkbox-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3% 20% 0% 20%;
+    background-color: rgb(87, 87, 87);
+}
+
+.checkbox-margin{
+    color: rgb(231, 231, 231);
+}
+
+.torrent-table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3% 20% 10% 20%;
+    text-align: center;
+}
+
+.demo-table{
+    text-align: center;
+    background-color: rgb(87, 87, 87);
+    color: rgb(34, 35, 38);
+}
+
+.table-row-category{
+    text-align: right;
+    width: 135px;
+    border-left: solid 1px;
+    border-right: solid 1px;
+    border-color: grey;
+    color: rgb(231, 231, 231);
+}
+
+.table-row-date{
+    text-align: right;
+    width: 125px;
+    border-color: grey;
+    color: rgb(231, 231, 231);
+}
+
+.table-row-title{
+    text-align: center;
+    border-color: grey;
+    color: rgb(231, 231, 231);
+}

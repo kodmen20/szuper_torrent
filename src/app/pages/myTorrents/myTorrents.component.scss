@@ -1,0 +1,85 @@
+.big-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(31, 31, 31);
+    color: rgb(31, 31, 31);
+
+}
+
+.divLeft{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+}
+
+.divMiddle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.divRight{
+    display: flex;
+    float: right;
+    justify-content: right;
+    align-items: right;
+    text-align: right;
+}
+
+.update-button{
+    display: block;
+    float: right;
+    text-align: left;
+    background-color: #e7e7e7; color: black;
+    padding: 10px 20px 10px 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    transition-duration: 0.1s;
+}
+
+.update-button:hover{
+    border-color: #06506d;
+    background-color: #0d4a83;
+    color: white;
+}
+
+.delete-button{
+    display: block;
+    float: left;
+    text-align: center;
+    background-color: #e7e7e7; color: black;
+    padding: 10px 20px 10px 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    transition-duration: 0.1s;
+}
+
+.delete-button:hover{
+    border-color: #06506d;
+    background-color: #0d4a83;
+    color: white;
+}
+
+.navigate-button{
+    display: block;
+    margin: auto;
+    text-align: center;
+    background-color: #e7e7e7; color: black;
+    padding: 10px 20px 10px 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    transition-duration: 0.1s;
+}
+
+.navigate-button:hover{
+    border-color: #06506d;
+    background-color: #0d4a83;
+    color: white;
+}

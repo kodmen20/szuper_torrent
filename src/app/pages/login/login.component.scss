@@ -1,0 +1,56 @@
+mat-icon{
+    color:rgb(0, 0, 0)
+}
+
+.form-field-email{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding-top: 10px;
+    border-radius: 10px;
+    width: 40%;
+}
+
+.form-field-pass{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 10px;
+    width: 40%;
+}
+
+.login-container{
+    background-color: rgb(87, 87, 87);
+    margin: auto;
+    border-radius: 10px;
+    width: 40%;
+}
+
+.login-button{
+   display: flex;
+   margin: auto;
+   text-align: center;
+   background-color: #e7e7e7; color: black;
+   padding: 10px 20px;
+   font-size: 16px;
+   border-radius: 10px;
+   border: 2px solid #000000;
+   transition-duration: 0.1s;
+}
+
+.login-button:hover{
+    border-color: #06506d;
+    background-color: #0d4a83;
+    color: white;
+}
+
+.register-link{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    padding-top: 10px;
+    color: #e7e7e7;
+}

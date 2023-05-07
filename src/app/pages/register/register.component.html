@@ -1,0 +1,42 @@
+<div class="register-container">
+    <form [formGroup]="registerForm">
+        <div>
+            <mat-form-field appearance="fill" floatLabel=always class="form-field-email">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" maxlength="30">
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field appearance="fill" floatLabel=always class="form-field-pass">
+                <mat-label>Username (6 or more charactes)</mat-label>
+                <input matInput formControlName="username" minlength="6" maxlength="15">
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field appearance="fill" floatLabel=always class="form-field-pass">
+                <mat-label>Password (6 or more charactes)</mat-label>
+                <input [type]="show ? 'text' : 'password'" matInput formControlName="password1" minlength="6">
+                <mat-icon matSuffix (click)="password()">{{visibility}}</mat-icon>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field appearance="fill" floatLabel=always class="form-field-pass">
+                <mat-label>Password again</mat-label>
+                <input [type]="show ? 'text' : 'password'" matInput formControlName="password2" minlength="6">
+                <mat-icon matSuffix (click)="password()">{{visibility}}</mat-icon>
+            </mat-form-field>
+        </div>
+
+        <div>
+            <input type="button" mat-raised-button value="register" (click)="register()"  class="register-button">
+        </div>
+
+        <div>
+            <a routerLink="/login" class="login-link">Login instead</a>
+        </div>
+    </form>
+</div>
+

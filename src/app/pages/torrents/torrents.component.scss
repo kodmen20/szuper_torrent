@@ -1,0 +1,97 @@
+.big-div{
+    background-color: rgb(31, 31, 31);
+}
+
+mat-divider{
+    background-color: rgb(117, 117, 117);
+    height: 10px;
+    width: 94%;
+}
+
+.smol-divider{
+    height: 2px;
+    width: 100%;
+}
+
+mat-card-subtitle{
+    color: rgb(255, 255, 255);
+}
+
+.card-title{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+}
+
+.torrent-card{
+    margin: auto;
+    padding-top: 10px;
+    border-radius: 10px;
+    width: 40%;
+    background-color: rgb(87, 87, 87);
+    color: rgb(255, 255, 255);
+}
+
+.torrent-description{
+    margin: 10px 0px 10px 0px;
+}
+
+.comment-div{
+    margin: auto;
+    padding-top: 10px;
+    border-radius: 10px;
+    width: 40%;
+    background-color: rgb(87, 87, 87);
+    color: rgb(255, 255, 255);
+}
+
+.comment-text{
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding-right: 6%;
+}
+
+.date-span{
+    align-items: right;
+    justify-content: right;
+    float: right;
+    padding-right: 6%;
+}
+
+.new-comment-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.comment-submit{
+    display: flex;
+    margin: auto;
+    text-align: center;
+    background-color: #e7e7e7; color: black;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    transition-duration: 0.1s;
+ }
+
+ .download-button{
+    display: flex;
+    margin: auto;
+    text-align: center;
+    background-color: #e7e7e7; color: black;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    transition-duration: 0.1s;
+ }
+ 
+ .comment-submit:hover{
+     border-color: #06506d;
+     background-color: #0d4a83;
+     color: white;
+ }

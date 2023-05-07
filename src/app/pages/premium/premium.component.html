@@ -1,0 +1,22 @@
+<div class="premium-container">
+    <div *ngIf="user.premium" class="premium">
+        You already have Premium!
+    </div>
+    
+    <div *ngIf="!(user.premium)" class="premium">Give me your money to remove ads!</div>
+    
+    <form [formGroup]="premiumForm" *ngIf="!(user.premium)">
+        <div>
+            <div class="premium">
+                <mat-form-field appearance="fill" floatLabel=always>
+                    <mat-label>money:</mat-label>
+                    <input type="number" matInput formControlName="moneyAmount" required>
+                </mat-form-field>
+            </div>
+            <div>
+                <button mat-raised-button (click)="buyPremium()">Buy</button>
+            </div>
+        </div>
+    </form>
+</div>
+

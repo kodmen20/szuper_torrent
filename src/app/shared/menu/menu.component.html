@@ -1,0 +1,16 @@
+<nav class="navigation">
+  <div class="topnav">
+    <b class="navusername">{{displayName}}
+      <p><a *ngIf="!(loggedInUser)" class="navlogin" routerLink="/login">Login</a>
+      <a *ngIf="loggedInUser" class="navlogin" routerLink="/" (click)="logout()">Logout</a></p>
+    </b>
+    <a class="navitem" routerLink="/">Home</a>
+    <a *ngIf="loggedInUser" class="navitem" routerLink="/upload">Upload</a>
+    <a *ngIf="!(user.premium) && loggedInUser" class="navitem" routerLink="/premium">Premium</a>
+    <a *ngIf="loggedInUser" class="navitem" routerLink="/myTorrents">My Torrents</a>
+  </div>
+</nav>
+
+<div>
+  <img src={{randomAd.imgPath}} id="ad" *ngIf="!(user.premium)" (click)="redirect()" target="blank">
+</div>

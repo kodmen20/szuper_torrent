@@ -1,0 +1,40 @@
+
+<h2 class="text-box">Upload a torrent!</h2>
+<form [formGroup]="uploadForm">
+   
+    <div class="upload-container">
+        
+        <div class="text-box">
+            <mat-form-field appearance="fill" floatLabel=always>
+                <mat-label>Title</mat-label>
+                <input matInput formControlName="uploadTitle" required maxlength="40">
+            </mat-form-field>
+        </div>
+        
+        <div>
+            <span class="upload-category-label">Category: </span>
+            <mat-select  [(value)]="default" class="upload-category" formControlName="uploadCategory" appearance="fill">
+                <mat-option value="movies">Movies <mat-icon>movie</mat-icon></mat-option>
+                <mat-option value="shows">Shows <mat-icon>slideshow</mat-icon></mat-option>
+                <mat-option value="games">Games <mat-icon>games</mat-icon></mat-option>
+                <mat-option value="programs">Programs <mat-icon>mouse</mat-icon></mat-option>
+                <mat-option value="other">Other <mat-icon>filter_vintage</mat-icon></mat-option>
+            </mat-select>
+        </div>
+        <br>
+        <div class="text-box">
+            <mat-form-field appearance="fill" floatLabel=always>
+                <mat-label>Description</mat-label>
+                <textarea matInput formControlName="uploadText" maxlength="256" required></textarea>
+            </mat-form-field>
+        </div>
+        <div>
+            <input type="file" (change)="fileUploaded($event)" formControlName="uploadFile" accept=".torrent" class="text-box"><br>
+        </div>
+        <div>
+            <button mat-raised-button (click)="uploadTorrent()">Upload</button>
+        </div>
+    </div>
+</form>
+
+
